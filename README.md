@@ -6,7 +6,7 @@ Este é um tamplate de um APP de agenda de eventos. Clique aqui para baixar a [A
 **IONIC**
 
 ### Executar projeto
-* **npm install -g ionic cordova** caso ainda não tenha o corva instalado.
+* **npm install -g ionic cordova** caso ainda não tenha o cordova instalado.
 * **npm install**
 * **ionic serve**
 
