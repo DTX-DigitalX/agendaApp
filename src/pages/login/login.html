@@ -1,0 +1,62 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="main">
+    <button [hidden]="!btnIcoMenu" ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons start>
+
+      <button [hidden]="!btnIcoArrowBack" ion-button icon-only (click)="voltar()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Login</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked color="primary">Login</ion-label>
+        <ion-input placeholder="Usuário" [(ngModel)]="userRaw" name="user" maxlength="15" type="tel" #user="ngModel" spellcheck="false"
+          autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="user.valid || submitted == false" color="orange" padding-left>
+        O Login é obrigatório.
+      </p>
+
+      <ion-item>
+        <ion-label stacked color="primary">Senha</ion-label>
+        <ion-input placeholder="Password" maxlength="15" mask="***************" [(ngModel)]="senhaRaw" name="senha" type="password"
+          #senha="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="senha.valid || submitted == false" color="orange" padding-left>
+        A Senha é obrigatória.
+      </p>
+
+    </ion-list>
+
+
+    <ion-row responsive-lg>
+      <button class="botao-login" ion-button [disabled]="isValid(loginForm)" (click)="onLogin(loginForm)" type="submit">Entrar</button>
+    </ion-row>
+
+    <p ion-text [hidden]="!mensagemErro" color="orange" padding-left>
+      {{mensagemErro?.error_description}}
+    </p>
+  </form>
+
+
+</ion-content>

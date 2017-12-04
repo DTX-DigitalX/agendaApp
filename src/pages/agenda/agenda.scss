@@ -1,0 +1,77 @@
+page-agenda {
+    max-height: 4000px;
+    ion-content {
+      background: #000000;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient( #000000, #004866);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient( #000000, #004866);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient( #000000, #004866);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient( #000000, #004866);
+      /* Standard syntax */
+    }
+    ion-row {
+      color: #ffffff;
+      ion-col {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        h1 {
+          word-wrap: normal;
+        }
+        h4 {
+          color: #D7D7D7;
+        }
+        h5 {
+          color: #FF9300;
+          word-wrap: break-word;
+        }
+        h6 {
+          color: #FF9300;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .powered-dtx {
+      padding-top: 25px;
+      .logo {
+        width: 15rem;
+        display: block;
+        /*for the img inside your div */
+        margin: 0 auto;
+      }
+    }
+    .timeline {
+      border-right-color: 1px;
+      border-right-color: rgba(255, 255, 255, 0.3);
+      border-right-style: solid;
+    }
+    .last-row {
+      margin-bottom: 15px;
+    }
+    .timeline:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0px auto -10px 100.8%;
+      background: #ffffff;
+      border-radius: 50%;
+    }
+    .ao-vivo.timeline:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0px auto -10px 100.8%;
+      background: #ff0000;
+      border-radius: 50%;
+    }
+    .timeline.timeline-left {
+      text-align: left;
+    }
+    .timeline.timeline-right {
+      text-align: right;
+    }
+  }

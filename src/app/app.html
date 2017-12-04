@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+
+      <button detail-none no-lines class="Agenda" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-start name="md-map"></ion-icon>
+        {{p.title}}
+      </button>
+
+      <button [hidden]="atualizar.hide" detail-none no-lines class="configuracao" menuClose ion-item (click)="openPage(atualizar)">
+        <ion-icon item-start name="md-settings"></ion-icon>
+        {{atualizar.title}}
+      </button>
+
+      <button [hidden]="login.hide" detail-none no-lines class="Login" menuClose ion-item (click)="openPage(login)">
+        <ion-icon item-start name="md-log-out"></ion-icon>
+        {{login.title}}
+      </button>
+
+      <button [hidden]="logout.hide" detail-none no-lines class="Login" menuClose ion-item (click)="userLogout(logout)">
+        <ion-icon item-start name="md-log-out"></ion-icon>
+        {{logout.title}}
+      </button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
